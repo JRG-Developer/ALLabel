@@ -32,7 +32,7 @@
  *  `ALLabel` fixes issues with embedding a `UILabel` in a `UIScrollScrollView`.
  *  @see http://www.raywenderlich.com/73602/dynamic-table-view-cell-height-auto-layout for examples and in-depth discussion on why this is needed.
  *
- *  @discussion Setting the label's `frame.size.width` (if multiline label) will update the `preferredMaxLayoutWidth`.
+ *  @discussion Setting the label's `bounds` will update the `preferredMaxLayoutWidth`.
  */
 @interface ALLabel : UILabel
 @end

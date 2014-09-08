@@ -30,15 +30,13 @@
 
 @implementation ALLabel
 
-- (void)layoutSubviews
+- (void)setBounds:(CGRect)bounds
 {
-  [super layoutSubviews];
+  [super setBounds:bounds];
   
-  if (self.numberOfLines == 0) {
-    if (self.preferredMaxLayoutWidth != self.frame.size.width) {
-      self.preferredMaxLayoutWidth = self.frame.size.width;
-      [self setNeedsUpdateConstraints];
-    }
+  if (bounds.size.width != self.preferredMaxLayoutWidth) {
+    self.preferredMaxLayoutWidth = self.bounds.size.width;
+    [self setNeedsUpdateConstraints];
   }
 }
 
