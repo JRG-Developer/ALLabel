@@ -40,17 +40,4 @@
   }
 }
 
-- (CGSize)intrinsicContentSize
-{
-  CGSize size = [super intrinsicContentSize];
-  
-  if (self.numberOfLines == 0) {
-    
-    // There's a bug where intrinsic content size may be 1 point too short
-    size.height += 1;
-  }
-  
-  return size;
-}
-
 @end
